@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./QnA.css";
 
-export default function QnA() {
+export default function QnA({ Data }) {
   const [show, setShow] = useState(0);
   return (
     <>
@@ -9,12 +9,10 @@ export default function QnA() {
         className="questionElement"
         onClick={() => (show ? setShow(0) : setShow(1))}
       >
-        What is roadmap.sh?
+        {Data.question}
       </div>
       <div className={`answerElement ${show ? "showAnswer" : null}`}>
-        roadmap.sh is a community effort to create learning paths, guides.
-        project ideas and other similar content to help developers grow in their
-        careers.
+        {Data.answer}
       </div>
     </>
   );
