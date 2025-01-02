@@ -6,11 +6,5 @@
   border-radius: 10px;
   padding: 40px;
   width: 30vw;
-}
-.questionElement {
-  width: 100%;
-  background-color: white;
-  color: black;
-  padding: 10px;
-  border-radius: 10px;
+  gap: 10px;
 }

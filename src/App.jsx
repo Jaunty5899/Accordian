@@ -1,12 +1,10 @@
-import { useState } from "react";
 import "./App.css";
+import QnA from "./QnA";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="container">
-      <div className="questionElement">What is roadmap.sh?</div>
+      <QnA />
     </div>
   );
 }
