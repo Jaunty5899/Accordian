@@ -6,7 +6,7 @@ export default function QnA({ Data, onSelect, isSelected }) {
       <div className="questionElement" onClick={onSelect}>
         {Data.question}
       </div>
-      <div className={`answerElement ${isSelected ? "showAnswer" : null}`}>
+      <div className={`answerElement ${isSelected && "showAnswer"}`}>
         {Data.answer}
       </div>
     </>
