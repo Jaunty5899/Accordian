@@ -1,17 +1,12 @@
-import { useState } from "react";
 import "./QnA.css";
 
-export default function QnA({ Data }) {
-  const [show, setShow] = useState(0);
+export default function QnA({ Data, onSelect, isSelected }) {
   return (
     <>
-      <div
-        className="questionElement"
-        onClick={() => (show ? setShow(0) : setShow(1))}
-      >
+      <div className="questionElement" onClick={onSelect}>
         {Data.question}
       </div>
-      <div className={`answerElement ${show ? "showAnswer" : null}`}>
+      <div className={`answerElement ${isSelected ? "showAnswer" : null}`}>
         {Data.answer}
       </div>
     </>

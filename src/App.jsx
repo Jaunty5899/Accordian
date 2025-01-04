@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import QnA from "./QnA";
 
@@ -20,10 +21,20 @@ const data = [
 ];
 
 function App() {
+  const [selectedQuestion, setSelectedQuestion] = useState();
+
+  function setter(selectedButton) {
+    setSelectedQuestion(selectedButton);
+  }
+
   return (
     <div className="container">
       {data.map((e) => (
-        <QnA Data={e} />
+        <QnA
+          Data={e}
+          isSelected={selectedQuestion == e.question}
+          onSelect={() => setter(e.question)}
+        />
       ))}
     </div>
   );
