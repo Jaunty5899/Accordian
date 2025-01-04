@@ -24,7 +24,9 @@ function App() {
   const [selectedQuestion, setSelectedQuestion] = useState();
 
   function setter(selectedButton) {
-    setSelectedQuestion(selectedButton);
+    selectedButton == selectedQuestion
+      ? setSelectedQuestion()
+      : setSelectedQuestion(selectedButton);
   }
 
   return (
